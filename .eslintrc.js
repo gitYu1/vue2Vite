@@ -26,6 +26,8 @@ module.exports = defineConfig({
     'plugin:prettier/recommended',
   ],
   rules: {
+    // 换行符警告
+    'prettier/prettier': 0,
     // 禁止使用多余的包
     'import/no-extraneous-dependencies': 0,
     // 确保在导入路径内一致使用文件扩展名
