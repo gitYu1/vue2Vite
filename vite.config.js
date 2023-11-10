@@ -36,7 +36,13 @@ export default ({ mode }) => {
       // 允许跨域
       cors: true,
       // 自定义代理规则
-      proxy: {},
+      proxy: {
+        '/dev': {
+          target: 'https://***',
+          changeOrigin: true,
+          rewrite: path => path.replace(/^\/dev/, '/noqqbm8yemx62rbbk5o1cz2jbqo7z6r6')
+        }
+      },
     },
     build: {
       // 设置最终构建的浏览器兼容目标
